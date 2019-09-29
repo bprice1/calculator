@@ -23,3 +23,15 @@ function divide(a, b) {
 function remainder(a, b) {
   return a % b;
 }
+
+/**
+ * Listen for a submit event on form and log results.
+ */
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  console.log("Submitted");
+});
