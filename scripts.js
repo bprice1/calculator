@@ -4,19 +4,19 @@
  * Math functions below.
  */
 const calc = {
-  add: function add(a, b) {
+  add(a, b) {
     return Number(a) + Number(b);
   },
-  subtract: function subtract(a, b) {
+  subtract(a, b) {
     return a - b;
   },
-  multiply: function multiply(a, b) {
+  multiply(a, b) {
     return a * b;
   },
-  divide: function divide(a, b) {
+  divide(a, b) {
     return a / b;
   },
-  remainder: function remainder(a, b) {
+  remainder(a, b) {
     return a % b;
   }
 };
@@ -31,7 +31,7 @@ const num2 = document.querySelector("#num-2");
 const select = document.querySelector("select");
 const output = document.querySelector("output");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", event => {
   event.preventDefault();
 
   /**
