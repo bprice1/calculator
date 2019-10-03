@@ -10,7 +10,7 @@ const calc = {
   subtract: function subtract(a, b) {
     return a - b;
   },
-  mutliply: function multiply(a, b) {
+  multiply: function multiply(a, b) {
     return a * b;
   },
   divide: function divide(a, b) {
@@ -40,8 +40,12 @@ form.addEventListener("submit", function(event) {
    *  * TODO: Figure out how to dynamically call a function by name.
    * Display results.
    */
-  console.log(num1.value, num2.value, select.value);
-  console.log(calc.add(num1.value, num2.value));
 
-  output.textContent = calc.add(num1.value, num2.value);
+  // const num1 = num1.value;
+  // const num2 = num2.value;
+  // const operation = select.value;
+
+  // output.textContent = calc[operation](num1, num2);
+
+  output.textContent = calc[select.value](num1.value, num2.value);
 });
