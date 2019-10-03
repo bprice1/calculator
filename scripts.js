@@ -3,26 +3,23 @@
 /**
  * Math functions below.
  */
-
-function add(a, b) {
-  return Number(a) + Number(b);
-}
-
-function subtract(a, b) {
-  return a - b;
-}
-
-function multiply(a, b) {
-  return a * b;
-}
-
-function divide(a, b) {
-  return a / b;
-}
-
-function remainder(a, b) {
-  return a % b;
-}
+const calc = {
+  add: function add(a, b) {
+    return Number(a) + Number(b);
+  },
+  subtract: function subtract(a, b) {
+    return a - b;
+  },
+  mutliply: function multiply(a, b) {
+    return a * b;
+  },
+  divide: function divide(a, b) {
+    return a / b;
+  },
+  remainder: function remainder(a, b) {
+    return a % b;
+  }
+};
 
 /**
  * Listen for a submit event on form and log results.
@@ -44,7 +41,7 @@ form.addEventListener("submit", function(event) {
    * Display results.
    */
   console.log(num1.value, num2.value, select.value);
-  console.log(add(num1.value, num2.value));
+  console.log(calc.add(num1.value, num2.value));
 
-  output.textContent = add(num1.value, num2.value);
+  output.textContent = calc.add(num1.value, num2.value);
 });
